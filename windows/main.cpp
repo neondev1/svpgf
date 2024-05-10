@@ -56,13 +56,13 @@ int main() {
         }
         free(outf);
         *dest <<
-    R"(\documentclass{article}
-    \usepackage{amsmath}
-    \usepackage[letterpaper, left=1in, right=1in, top=1in, bottom=1in] {geometry}
-    \usepackage{tikz}
-    \usepackage{pgfplots}
+R"(\documentclass{article}
+\usepackage{amsmath}
+\usepackage[letterpaper, left=1in, right=1in, top=1in, bottom=1in] {geometry}
+\usepackage{tikz}
+\usepackage{pgfplots}
 
-    \begin{document})" <<
+\begin{document})" <<
         "\n\t\\begin{tikzpicture}\n"
         "\t\t\\begin{axis} [width=15cm, xlabel={Time, $t$ (s)}, ylabel={Temperature, $T$ ($^\\circ$C)}]\n"
         "\t\t\t\\addplot[scatter, mark=none, scatter src=\\thisrow{class}] table[x=x, y=y] {\n"
